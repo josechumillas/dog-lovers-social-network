@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
+const status = require('./status/status');
+const users = require('./v1/users');
+const friendships = require('./v1/friendships');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send('Hello world!');
-});
-
-module.exports = router;
+module.exports = (app) => {
+  status(app);
+  users(app);
+  friendships(app);
+};

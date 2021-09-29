@@ -1,1 +1,9 @@
+# Node
 /node_modules
+
+# Basic
+.DS_Store
+.env
+
+# Other
+database.db

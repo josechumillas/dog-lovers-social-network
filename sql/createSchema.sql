@@ -1,6 +1,23 @@
-create table if not exists test (
-  id int,
-  description text
+PRAGMA foreign_keys=ON;
+DROP TABLE IF EXISTS friendships;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT NOT NULL UNIQUE,
+  email TEXT NOT NULL UNIQUE,
+  password TEXT NOT NULL,
+  language TEXT NOT NULL DEFAULT "EN",
+  latitude REAL NOT NULL,
+  longitude REAL NOT NULL
 );
 
-insert into test values (1, 'test');
+CREATE TABLE IF NOT EXISTS friendships (
+  user_id1 INTEGER NOT NULL,
+  user_id2 INTEGER NOT NULL,
+  confirmed BOOLEAN NOT NULL DEFAULT 0,
+  PRIMARY KEY(user_id1, user_id2)
+  FOREIGN KEY (user_id1) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id2) REFERENCES users(id) ON DELETE CASCADE
+);
+
