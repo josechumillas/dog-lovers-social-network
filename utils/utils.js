@@ -19,7 +19,7 @@ const filterUserPublicFields = (user) => ({
 });
 
 const validateUsername = (text) => text?.length >= 4;
-const validateEmail = (text) => text?.length >= 4;
+const validateEmail = (text) => /\S+@\S+\.\S+/.test(text);
 const validatePassword = (text) => text?.length >= 4;
 const validateCoordinates = (n) => Number(n) === n && n % 1 !== 0;
 const validateLanguage = (text) =>
