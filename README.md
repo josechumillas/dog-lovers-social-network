@@ -1,3 +1,24 @@
+# dog-lovers-social-network
+
+## Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# normal serve at localhost:3000
+$ npm run start
+
+# create database
+$ npm run create-db
+
+# run tests
+$ npm run test
+```
+
 
 ## Descripción
 
