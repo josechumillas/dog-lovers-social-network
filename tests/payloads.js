@@ -19,6 +19,16 @@ module.exports = {
     },
     language: 'es'
   },
+  register3: {
+    username: 'vicente',
+    email: 'vicente@mail.com',
+    password: '12345678',
+    location: {
+      latitude: -40.4167,
+      longitude: -3.70325
+    },
+    language: 'en'
+  },
   registerIncorrect: {
     username: '',
     email: ''

@@ -21,7 +21,7 @@ describe('Users tests', () => {
   });
 
   describe('Create User', () => {
-    describe('Create a user with correct parameters', () => {
+    describe('Create a user with correct parameters in northern hemisphere', () => {
       it("it should has status code 200 and an 'Created OK' message", (done) => {
         chai
           .request(app)
@@ -34,6 +34,23 @@ describe('Users tests', () => {
             expect(response.body).to.have.property('hemisphere').eql('northern');
             const dataProperties = ['username', 'email', 'language', 'location'];
             expect(Object.keys(response.body.data).map((el) => dataProperties.includes(el)));
+            if (error) done(error);
+            done();
+          });
+      });
+    });
+
+    describe('Create a user with correct parameters in southern hemisphere', () => {
+      it("it should has status code 200 and an 'Created OK' message", (done) => {
+        chai
+          .request(app)
+          .post('/api/v1/users')
+          .set('Accept', 'application/json')
+          .send(payloads.register3)
+          .end((error, response) => {
+            expect(response).to.have.status(201);
+            expect(response.body).to.have.property('message').eql('Created OK');
+            expect(response.body).to.have.property('hemisphere').eql('southern');
             if (error) done(error);
             done();
           });
