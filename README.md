@@ -19,6 +19,8 @@ $ npm run create-db
 $ npm run test
 ```
 
+The project contains a Postman import JSON.
+
 
 ## Descripción
 
