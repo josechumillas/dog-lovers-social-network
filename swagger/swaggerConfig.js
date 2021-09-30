@@ -5,13 +5,7 @@ module.exports = {
     version: '1.0',
     title: 'dog lovers social network'
   },
-  host: process.env.HOST_NAME,
   basePath: '/',
-  tags: [
-    {
-      name: 'API Web'
-    }
-  ],
   securityDefinitions: {
     Bearer: {
       type: 'apiKey',
