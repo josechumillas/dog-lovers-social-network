@@ -8,5 +8,5 @@ module.exports = (app) => {
   status(app);
   users(app);
   friendships(app);
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerConfig));
+  app.use('/api/v1/api-docs/', swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 };

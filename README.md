@@ -20,16 +20,17 @@ $ npm run test
 ```
 
 The project contains a Postman import JSON.
-
+The API Doc is available on /api/v1/api-docs/
 
 ## Descripción
 
 Este proyecto vacío, con ciertas utilidades, se entrega como material para facilitar el desarollo de la prueba técnica
 
 Corresponde al desarrollador construir la funcionalidad. Para ejecutar el API se puede hacer mediante:
-  ```
-  npm start
-  ```
+
+```
+npm start
+```
 
 Como utilidades para agilizar el desarrollo se incluye lo siguiente:
 
@@ -40,7 +41,6 @@ Como utilidades para agilizar el desarrollo se incluye lo siguiente:
   npm run create-db
   ```
 - Un objeto en la carpeta "services" para realizar peticiones al API externa que procesa usuarios del hemisferio sur
-
 
 ## Requisitos
 
