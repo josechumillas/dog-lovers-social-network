@@ -9,9 +9,7 @@ module.exports = {
   basePath: '/',
   tags: [
     {
-      name: 'API Web',
-      description:
-        'Here, you can find Decathlon local services developed by Omniexperience team. This service are'
+      name: 'API Web'
     }
   ],
   securityDefinitions: {
