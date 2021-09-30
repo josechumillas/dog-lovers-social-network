@@ -1,11 +1,11 @@
-const SQLiteDb = require('../lib/db');
+const db = require('../database/db');
 const UserRepository = require('../repositories/UserRepository');
 const FriendshipRepository = require('../repositories/FriendshipRepository');
 const handleError = require('../lib/errorHandler');
 const { filterUserPublicFields } = require('../utils/utils');
 
-const User = new UserRepository(new SQLiteDb());
-const Friendship = new FriendshipRepository(new SQLiteDb());
+const User = new UserRepository(db);
+const Friendship = new FriendshipRepository(db);
 
 module.exports.addFriendship = async (req, res) => {
   const userId = req.user.id;

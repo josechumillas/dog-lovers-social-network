@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon -L --exec babel-node ./bin/www",
-    "start": "node ./bin/www",
+    "start": "babel-node ./bin/www",
     "create-db": "node ./sql/createSchema",
     "test": "babel-node ./node_modules/.bin/mocha tests/*.test.js --timeout 60000 --exit"
   },

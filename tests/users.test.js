@@ -2,10 +2,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../app');
-const SQLiteDb = require('../lib/db');
+const db = require('../database/db');
 const payloads = require('./payloads');
-
-const db = new SQLiteDb();
 
 chai.use(chaiHttp);
 

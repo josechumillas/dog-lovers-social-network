@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const SQLiteDb = require('../lib/db');
+const db = require('../database/db');
 const UserRepository = require('../repositories/UserRepository');
 const handleError = require('../lib/errorHandler');
 const {
@@ -15,7 +15,7 @@ const {
 const { isSouthOrNorth } = require('../utils/geoLocation');
 const { insertUser } = require('../services/southernUsersApi');
 
-const User = new UserRepository(new SQLiteDb());
+const User = new UserRepository(db);
 
 module.exports.login = async (req, res) => {
   const { username, password } = req?.body;
